@@ -1,10 +1,10 @@
 public class CentralAtendimento {
-	private PilhaProcesso pendentes;
-	private PilhaProcesso historico;
+	private PilhaPrioridade pendentes;
+	private PilhaPrioridade historico;
 
 	public CentralAtendimento() {
-		this.pendentes = new PilhaProcesso();
-		this.historico = new PilhaProcesso();
+		this.pendentes = new PilhaPrioridade();
+		this.historico = new PilhaPrioridade();
 	}
 
 	public void abrirProcesso(Processo p) {
@@ -17,7 +17,7 @@ public class CentralAtendimento {
 		try {
 			Processo p = pendentes.pop();
 			historico.push(p);
-			System.out.println("Processo atendido: " + p);
+			System.out.println("Processo atendido:\n" + p);
 		} catch (PilhaVaziaException e) {
 			System.out.println("Erro: não há processos pendentes.");
 		}
@@ -35,11 +35,11 @@ public class CentralAtendimento {
 
 	public void listarPendentes() {
 		System.out.println("\n=== PROCESSOS PENDENTES ===");
-		pendentes.imprimir();
+		pendentes.listar();
 	}
 
 	public void listarHistorico() {
 		System.out.println("\n=== HISTÓRICO DE ATENDIMENTOS ===");
-		historico.imprimir();
+		historico.listar();
 	}
 }

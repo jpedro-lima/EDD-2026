@@ -50,4 +50,12 @@ public class PilhaProcesso {
 	public boolean estaVazia() {
 		return vetor.estaVazio();
 	}
+
+	public int getTopo() {
+		return vetor.getTopo();
+	}
+
+	public int getCapacidade() {
+		return vetor.getCapacidade();
+	}
 }
