@@ -32,6 +32,11 @@ public class VetorDinamico {
 		return removido;
 	}
 	
+	public Processo peek() {
+		if (topo == 0) return null;
+		return processos[topo - 1];
+	}
+	
 	private void redimensionar(int novaCapacidade) {
 		Processo[] novo = new Processo[novaCapacidade];
 		for(int i = 0; i < topo; i++) {
@@ -61,8 +66,9 @@ public class VetorDinamico {
 		return -1;
 	}
 	
-	public int getTopo() {return topo;}
-	public int getCapacidade() {return capacidade;}
-	public boolean estaCheio() {return capacidade == topo;}
-	public boolean estaVazio() {return topo == 0;}
+	public int				getTopo() {return topo;}
+	public int				getCapacidade() {return capacidade;}
+	public Processo[]	getProcessos() { return processos; }
+	public boolean		estaCheio() {return capacidade == topo;}
+	public boolean		estaVazio() {return topo == 0;}
 }
