@@ -36,12 +36,15 @@ public class PilhaProcesso {
 		}
 		
 		System.out.println("=== TOPO ===");
-		
 		for (int i = vetor.getTopo() - 1; i >= 0; i--) {
 			System.out.println((i + 1) + " - " + vetor.getProcessos()[i]);
 		}
-		
 		System.out.println("=== BASE ===");
+	}
+	
+	public void limpar() {
+		while (!estaVazia())
+			pop();
 	}
 	
 	public boolean estaVazia() {
