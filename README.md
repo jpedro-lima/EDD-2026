@@ -8,11 +8,6 @@ Nome: João Pedro Correia de Lima
 - Foram criados Testers para VetorDinamico e PilhaProcesso (tente usa-los)
 - O console está em Main.java
 
-```
-javac Main.java
-java Main
-```
-
 ### funções extras
 
 - limpar(), em PilhaProcessos e PilhaPrioridades para faciliar a limpeza de historico
