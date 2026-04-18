@@ -5,24 +5,25 @@ public class Processo {
 	private int protocolo;
 	private String nomeSolicitante;
 	private String tipoServico;
-	private int urgencia;
-	private LocalDateTime  criadoEm;
+	private int prioridade;
+	private String dataHora;
+
+	private static int contadorProtocolos = 0;
 	
-	public Processo(String solicitante, String servico, int urgencia, int protocolo) {
-		this.protocolo = protocolo;
+	public Processo(String solicitante, String tipoServico, int prioridade) {
+		this.protocolo = ++contadorProtocolos;
 		this.nomeSolicitante = solicitante;
-		this.tipoServico = servico;
-		this.urgencia = urgencia;
-		this.criadoEm = LocalDateTime.now();
+		this.tipoServico = tipoServico;
+		this.prioridade = prioridade;
+		this.dataHora = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
 	}
 	
 	@Override
 	public String toString() {
-		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 		return String.format(
 			"[#%d | %s | %s | Prioridade: %s | Aberto em: %s]",
 			protocolo, nomeSolicitante, tipoServico,
-			urgencia, criadoEm.format(fmt)
+			prioridade, dataHora
 		);
 	}
 	
@@ -38,11 +39,11 @@ public class Processo {
 	
 	public void setTipoServico(String tipoServico) { this.tipoServico = tipoServico;	}
 	
-	public int getUrgencia() { return urgencia;	}
+	public int getPrioridade() { return prioridade;	}
 	
-	public void setUrgencia(int urgencia) { this.urgencia = urgencia; }
+	public void setPrioridade(int prioridade) { this.prioridade = prioridade; }
 	
-	public LocalDateTime getCriadoEm() {return criadoEm; }
+	public String getDataHora() {return dataHora; }
 	
-	public void setCriadoEm(LocalDateTime criadoEm) { this.criadoEm = criadoEm;	}
+	public void setDataHora(String dataHora) { this.dataHora = dataHora;	}
 }
