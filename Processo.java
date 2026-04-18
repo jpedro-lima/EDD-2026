@@ -14,7 +14,7 @@ public class Processo {
 		this.protocolo = ++contadorProtocolos;
 		this.nomeSolicitante = solicitante;
 		this.tipoServico = tipoServico;
-		this.prioridade = prioridade;
+		this.prioridade = prioridade % 3;
 		this.dataHora = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
 	}
 	
