@@ -27,23 +27,18 @@ public class Processo {
 		);
 	}
 	
-	public int getProtocolo() {	return protocolo;}
+	public int		getProtocolo() {	return protocolo;}
+	public void		setProtocolo(int protocolo) { this.protocolo = protocolo;	}
 	
-	public void setProtocolo(int protocolo) { this.protocolo = protocolo;	}
+	public String	getNomeSolicitante() { return nomeSolicitante; }
+	public void		setNomeSolicitante(String nomeSolicitante) { this.nomeSolicitante = nomeSolicitante; }
 	
-	public String getNomeSolicitante() { return nomeSolicitante; }
+	public String	getTipoServico() { return tipoServico; }
+	public void		setTipoServico(String tipoServico) { this.tipoServico = tipoServico;	}
 	
-	public void setNomeSolicitante(String nomeSolicitante) { this.nomeSolicitante = nomeSolicitante; }
+	public int		getPrioridade() { return prioridade;	}
+	public void		setPrioridade(int prioridade) { this.prioridade = prioridade; }
 	
-	public String getTipoServico() { return tipoServico; }
-	
-	public void setTipoServico(String tipoServico) { this.tipoServico = tipoServico;	}
-	
-	public int getPrioridade() { return prioridade;	}
-	
-	public void setPrioridade(int prioridade) { this.prioridade = prioridade; }
-	
-	public String getDataHora() {return dataHora; }
-	
-	public void setDataHora(String dataHora) { this.dataHora = dataHora;	}
+	public String	getDataHora() {return dataHora; }
+	public void		setDataHora(String dataHora) { this.dataHora = dataHora;	}
 }
