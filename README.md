@@ -13,3 +13,6 @@ Nome: João Pedro Correia de Lima
 - limpar(), em PilhaProcessos e PilhaPrioridades para faciliar a limpeza de historico
 - IllegalArgumentException em PilhaPrioridade
 - gets e sets extras no Vetor e nas Pilhas
+
+### função faltando
+- Na classe Processo não foi feito o equals(), pois ainda não foi trabalhado em sala
