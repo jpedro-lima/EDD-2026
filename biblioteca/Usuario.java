@@ -12,7 +12,7 @@ public class Usuario {
 	@Override
 	public String toString() {
 		return String.format(
-			"[#%d | %s | %s]",
+			"#%d | %s | %s",
 			matricula, nome, email
 		);
 	}
