@@ -74,4 +74,14 @@ public class NossoHash<K, V> {
 			System.out.println();
 		}
 	}
+
+	public void exibeValores() {
+		for (int i = 0; i < capacidade; i++) {
+			Entrada<K, V> atual = tabela[i];
+			while (atual != null) {
+				System.out.println(atual.value);
+				atual = atual.proximo;
+			}
+		}
+	}
 }
